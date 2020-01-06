@@ -12,4 +12,5 @@ This is a work in progress and the app will be built over the course of 2-3 meet
 * `php artisan key:generate`
 * Edit `.env` and put database and other credentials
 * `php artisan migrate`
+* `php artisan passport:install`
 * `npm run dev`
