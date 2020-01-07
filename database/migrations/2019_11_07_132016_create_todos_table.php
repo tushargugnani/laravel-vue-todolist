@@ -21,6 +21,8 @@ class CreateTodosTable extends Migration
             $table->timestamp('due_at')->nullable();
             $table->timestamp('completed_at')->nullable();
             $table->timestamps();
+
+            $table->foreign('todo_list_id')->references('id')->on('todo_lists')->onDelete('cascade');
         });
     }
 
