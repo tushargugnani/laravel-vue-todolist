@@ -15,14 +15,14 @@
 
                     <div class="row">
                         <div class="col-md-5 border-right">
-                            <div class="row">
+                            <div class="row" id="lists">
                                 <div class="col-md-12">
                                     <h3>Lists</h3>
-                                    <button class="btn btn-link" v-if="showListForm == false" @click="showListForm = true">+ Add List</button>
-                                    <form class="form-inline" v-else
+                                    <button class="btn btn-link add-list" v-if="showListForm == false" @click="showListForm = true">+ Add List</button>
+                                    <form class="form-inline add-list-form" v-else
                                         @submit.prevent="saveList()">
                                         <div class="form-group mx-sm-3 mb-2">
-                                            <input class="form-control" placeholder="List name"
+                                            <input class="form-control" placeholder="List name" name="list-name"
                                             v-model="listForm.name"
                                             @keyup.esc="showListForm = false">
                                         </div>
@@ -60,7 +60,7 @@
                             </div>
                         </div>
                         <div class="col-md-7 border-right">
-                            <div class="row">
+                            <div class="row" id="todos">
                                 <div class="col-md-12">
                                     <h3>Todos</h3>
                                     <button class="btn btn-link"
